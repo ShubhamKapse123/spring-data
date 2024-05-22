@@ -1,5 +1,6 @@
 package com.springapp.springdata;
 
+import com.springapp.springdata.onetoone.entities.Laptop;
 import com.springapp.springdata.onetoone.entities.Student;
 import com.springapp.springdata.repositories.StudentDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,11 @@ public class SpringDataApplication implements CommandLineRunner {
 		System.out.println("Sql database");
 		Student student = new Student();
 		student.setStdName("Keshav");
+		Laptop laptop= new Laptop();
+		laptop.setDeviceName("HP");
+		//important
+		laptop.setStudent(student);
+		student.setLaptop(laptop);
 		studentDAO.save(student);
 
 	}

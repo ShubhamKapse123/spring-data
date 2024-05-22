@@ -12,6 +12,16 @@ public class Student {
     @Column(name = "stname")
     private String stdName;
 
+    @OneToOne(mappedBy = "student",cascade = CascadeType.ALL)
+    private Laptop laptop;
+
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
 
     public void setStdId(String stdId) {
         this.stdId = stdId;

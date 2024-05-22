@@ -5,6 +5,7 @@ learning the spring data jpa
 In Spring Data JPA, a one-to-one relationship refers to a specific type of association
 between two entities where each instance of one entity is related to exactly one instance of another entity.
 Using the @OneToOne Annotation.
+use cascade = CascadeType.ALL for perform the operation on join table without creating repository class
 
 #### Using a Foreign Key:
 In this approach, we create a foreign key column in one of the entities to establish the one-to-one relationship.
