@@ -1,12 +1,8 @@
-package com.springapp.springdata.entites;
-
-import jakarta.persistence.*;
-import org.springframework.data.mongodb.core.mapping.Document;
+package com.springapp.springdata.onetoone.entities;
 
 
-@Document("teacher_master")
+
 public class Teacher {
-    @Id
     private long techId;
     private String techName;
 

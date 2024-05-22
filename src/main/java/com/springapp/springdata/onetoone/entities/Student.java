@@ -1,4 +1,4 @@
-package com.springapp.springdata.entites;
+package com.springapp.springdata.onetoone.entities;
 
 import jakarta.persistence.*;
 
@@ -7,19 +7,13 @@ import jakarta.persistence.*;
 public class Student {
     @Column(name = "stid")
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int stdId;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String stdId;
     @Column(name = "stname")
     private String stdName;
 
-    public Student( String stdName) {
-        this.stdName = stdName;
-    }
 
-    public Student() {
-    }
-
-    public void setStdId(int stdId) {
+    public void setStdId(String stdId) {
         this.stdId = stdId;
     }
 
@@ -31,7 +25,7 @@ public class Student {
         return stdName;
     }
 
-    public int getStdId() {
+    public String getStdId() {
         return stdId;
     }
 }
