@@ -1,14 +1,20 @@
 package com.springapp.springdata;
 
+import com.springapp.springdata.manytomany.Category;
+import com.springapp.springdata.manytomany.Product;
 import com.springapp.springdata.onetomany.Address;
 import com.springapp.springdata.onetomany.StudentOneToMany;
+import com.springapp.springdata.repositories.CategoryDAO;
 import com.springapp.springdata.repositories.StudentDAO;
 import com.springapp.springdata.repositories.StudentOneToManyDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @SpringBootApplication
@@ -18,6 +24,9 @@ public class SpringDataApplication implements CommandLineRunner {
 
 	@Autowired
 	private StudentOneToManyDAO studentOneToManyDAO;
+
+	@Autowired
+	private CategoryDAO categoryDAO;
 
 	public static void main(String[] args) {
 		System.out.println("Spring data project start");
@@ -62,7 +71,45 @@ public class SpringDataApplication implements CommandLineRunner {
 //		studentOneToManyDAO.save(studentOnetoMay);
 		// OneToMany Mapping End
 
+ // many to many mapping start
 
+//		Product product= new Product();
+//		product.setProdId("10001");
+//		product.setProdName("Nokia");
+//		Product product1= new Product();
+//		product1.setProdId("10002");
+//		product1.setProdName("LG");
+//		Product product2= new Product();
+//		product2.setProdId("10003");
+//		product2.setProdName("Sha");
+//
+//		Category mob= new Category();
+//		mob.setCatID("101");
+//		mob.setCatName("Mobile");
+//		List<Product> mobiles=new ArrayList<>();
+//		mobiles.add(product);
+//		mobiles.add(product1);
+//		mobiles.add(product2);
+//		mob.setProduct(mobiles);
+//
+//		Category ac= new Category();
+//		ac.setCatID("102");
+//		ac.setCatName("ac");
+//		List<Product> acProduct=new ArrayList<>();
+//		acProduct.add(product2);
+//		acProduct.add(product1);
+//		ac.setProduct(acProduct);
+//
+//		categoryDAO.save(mob);
+//		categoryDAO.save(ac);
+
+		//getting
+
+//		Optional<Category> category= categoryDAO.findById("101");
+//		List<Product> products=category.get().getProduct();
+//		products.forEach(p->System.out.println(p.getProdName()+"-"+p.getProdId()));
+
+// many to many mapping end
 
 	}
 }
