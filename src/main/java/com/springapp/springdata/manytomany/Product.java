@@ -11,7 +11,7 @@ public class Product {
     private String prodId;
     private String prodName;
 
-    @ManyToMany(mappedBy = "product")
+    @ManyToMany(mappedBy = "product",fetch = FetchType.EAGER)
     private List<Category> category;
 
     public String getProdId() {
