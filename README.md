@@ -15,7 +15,7 @@ mailing address, and each mailing address should be associated with only one use
 ### One to Many
 In Spring Data JPA, a one-to-many relationship refers to an association between two entities where one entity (the parent) 
 can be linked to multiple instances of another entity (the child), but each child is associated with only one parent.
-
+ex. one student but having multiple address that one to many 
 ##### Using the @OneToMany Annotation:
 In this approach, we use the @OneToMany annotation to define the relationship between the parent and child entities.
 Typically, the child entity owns the relationship, and the parent entity contains the @OneToMany annotation.
